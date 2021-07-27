@@ -4,7 +4,7 @@
   "description": "first app nodejs",
   "main": "src/index.js",
   "scripts": {
-    "beautiful":"prettier --single-quote --trailing-comma all --tab-width 4 --write \"src/**/*.{js,json,scss}\"",
+    "beautiful": "prettier --single-quote --trailing-comma all --tab-width 4 --write \"src/**/*.{js,json,scss}\"",
     "start": "nodemon --inspect src/index.js",
     "watch": "node-sass --watch src/resource/scss/ -o  src/public/css/",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -36,11 +36,11 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "npm run beautiful"
     }
   },
-    "devDependencies": {
-    "husky": "^7.0.1",
+  "devDependencies": {
+    "husky": "^4.3.8",
     "lint-staged": "^11.1.1",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.9",
